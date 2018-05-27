@@ -7,8 +7,8 @@
     <ProjectGuid>{2CF8BC3F-1513-4983-9871-5571E3078EDA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BW.Domain.Enitiy</RootNamespace>
-    <AssemblyName>BW.Domain.Enitiy</AssemblyName>
+    <RootNamespace>BW.Enitiy</RootNamespace>
+    <AssemblyName>BW.Enitiy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountsCollection.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="AccountsBankInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccountsBankInfoRespository
+namespace BW.Respository
 {
-    public class Class1
+    public class  AccountsCollection
     {
     }
 }

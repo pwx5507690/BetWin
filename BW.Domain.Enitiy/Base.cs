@@ -3,7 +3,7 @@ using BW.DataSource;
 using System.Data;
 using Newtonsoft.Json;
 
-namespace BW.Domain.Enitiy
+namespace BW.Enitiy
 {
     public abstract class Base<T> : SQLDataEnity<T>
 	{

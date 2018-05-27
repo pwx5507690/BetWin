@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyLoad.cs" />
     <Compile Include="ExtendArray.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="ExtendObject.cs" />

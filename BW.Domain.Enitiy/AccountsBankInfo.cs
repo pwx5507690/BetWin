@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BW.Domain.Enitiy
+namespace BW.Enitiy
 {
     public class AccountsBankInfo : Base<AccountsBankInfo>
     {
