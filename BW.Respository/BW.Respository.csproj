@@ -54,6 +54,10 @@
       <Project>{2cf8bc3f-1513-4983-9871-5571e3078eda}</Project>
       <Name>BW.Enitiy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BW.Infrastructure\BW.Infrastructure.csproj">
+      <Project>{7a6ab223-5254-42f6-85be-65ce7e4709c9}</Project>
+      <Name>BW.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

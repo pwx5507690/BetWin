@@ -4,7 +4,7 @@ using BW.Infrastructure;
 
 namespace BW.Core.Injection
 {
-    public class WebModuleRegistration : Module
+    public class Registration : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

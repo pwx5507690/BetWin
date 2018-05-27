@@ -9,21 +9,24 @@ using System.Web.Mvc;
 
 namespace BW.App.Controllers
 {
+    [RoutePrefix("Page")]
     public class PageTempController : Controller
-    {
+    {        
         public AccountsBankInfoRespository _AccountsBankInfoRespository { get; set; }
-        //public PageTempController(AccountsBankInfoRespository accountsBankInfoRespository)
-        //{
-        //    _accountsBankInfoRespository = accountsBankInfoRespository;
-        //}
-        public ActionResult AccountsBankInfo()
-        {
-            return View();
+
+        public object GetDyncProperty(string respository) {
+            if (string.IsNullOrEmpty(respository))
+                throw new BWException("respository IsNullOrEmpty");
+
+            respository = $"_{respository}Respository";
+            return this.GetType().GetProperty(respository).GetValue(this);
         }
-        public ActionResult AccountsBankList(int limit, int pageIndex, string expression)
+        [HttpGet]
+        [Route("Query/{respository}")]
+        public ActionResult Query(int limit, int pageIndex, string expression, string respository)
         {
-            var obj = this.GetType().GetProperty("_AccountsBankInfoRespository").GetValue(this);
-            var result = obj.GetType().GetMethod("Query").Invoke(obj, new object[] { limit, pageIndex, expression });
+            var dyncProperty = GetDyncProperty(respository);
+            var result = dyncProperty.GetType().GetMethod("Query").Invoke(dyncProperty, new object[] { limit, pageIndex, expression });
             var table = new TableResult.Table();
             Array.ForEach(result.GetType().GetProperties(), t => {
                 if (t.Name == "Result")
@@ -33,10 +36,11 @@ namespace BW.App.Controllers
             });
             return new TableResult(table);
         }
-
-        public ActionResult Index()
+        [HttpGet]
+        [Route("View/{viewName}")]
+        public ActionResult GetView(string viewName)
         {
-            return View();
+            return View(viewName);
         }
     }
 }
