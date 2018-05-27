@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>银行账户明细</title>
+    <!-- 此文件为了显示Demo样式，项目中不需要引入 -->
+    <link href="/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/main-min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/diy.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="demo-content">
+        <div class="row">
+            <div class="span30 doc-content">
+                <form id="searchForm" class="form-panel" tabindex="0" style="outline: none;">
+                    <ul class="panel-content">
+                        <li>
+                            <label>账户名称：</label><input type="text" name="">
+                            <label>开户银行：</label><input type="text" name="">
+                            <label>银行代号：</label><input type="text" name="">
+                            <label>银行卡号：</label><input type="text" name="">
+                            
+                            <button type="submit" class="button button-primary">查询</button>
+                            <a class="button" href="#" onclick="del()">新增银行账户</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="search-grid-container">
+            <div id="grid">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bui.js"></script>
+    <script type="text/javascript" src="/assets/js/config.js"></script>
+    <script type="text/javascript">
+        var url = "/PageTemp/AccountsBankList";
+        var Grid = BUI.Grid,
+            Store = BUI.Data.Store,
+            columns = [
+                { title: '账户名称', width: 100, sortable: false, dataIndex: 'accounts' },
+                { title: '开户银行', width: 100, sortable: true, selectable: true, dataIndex: 'bankName' },
+                { title: '银行代号', width: 150, sortable: false, selectable: true, dataIndex: 'bankCode' },
+                { title: '地址', width: 100, sortable: true, showTip: true, dataIndex: 'bankAddress' },
+                { title: '银行卡号', width: 100, sortable: true, showTip: true, dataIndex: 'bankNum' },
+                { title: '银行开户名称', width: 100, sortable: true, dataIndex: 'bankUserName' },
+                { title: '更新时间', width: 100, sortable: true, dataIndex: 'addDate' },
+                {
+                    title: '操作', width: 300, dataIndex: 'g', renderer: function (value, obj) {
+                        return '<span class="grid-command button" onclick="del()">确认</span><span class="grid-command button" onclick="del()">删除</span>';
+                    }
+                }
+            ];
+        var store = new Store({
+            url: url,
+            autoLoad: true,
+            pageSize: 10
+        }),
+            grid = new Grid.Grid({
+                render: '#grid',
+                loadMask: true,
+                forceFit: true,
+                columns: columns,
+                store: store,
+                plugins: [Grid.Plugins.AutoFit], //勾选插件、自适应宽度插件
+                // 顶部工具栏
+                bbar: {
+                    //items 也可以在此配置
+                    // pagingBar:表明包含分页栏
+                    pagingBar: true
+                }
+            });
+
+        grid.render();
+        //创建表单，表单中的日历，不需要单独初始化
+        var form = new BUI.Form.HForm({
+            srcNode: '#searchForm'
+        }).render();
+
+        form.on('beforesubmit', function (ev) {
+            //序列化成对象
+            var obj = form.serializeToObject();
+            obj.start = 0; //返回第一页
+            store.load(obj);
+            return false;
+        });
+        function del() {
+            BUI.use('bui/overlay', function (Overlay) {
+                var dialog = new Overlay.Dialog({
+                    title: '',
+                    width: 250,
+                    height: 100,
+                    bodyContent: '<p>确定删除该条记录？</p>',
+                    success: function () {
+                        alert('确认');
+                        this.close();
+                    }
+                });
+                dialog.show();
+            });
+        }
+    </script>
+    <!-- script end -->
+</body>
+</html>

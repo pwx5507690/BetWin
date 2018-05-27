@@ -25,7 +25,6 @@ namespace BW.App.Result
 				ContractResolver = new CamelCasePropertyNamesContractResolver()
 			};
 		}
-
 		public override void ExecuteResult(ControllerContext context)
 		{
 			if (context == null)

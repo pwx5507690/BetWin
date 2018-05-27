@@ -19,6 +19,7 @@ namespace BW.App
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Bootstrap.ConfigureApplication(IoC.Container);
             Bootstrap.ConfigureMvc(IoC.Container);
+            
         }
     }
 }

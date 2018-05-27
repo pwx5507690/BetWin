@@ -1,0 +1,27 @@
+.demo-content{padding: 20px}
+.form-panel .panel-content li{height:auto;}
+input.calendar-time{width: 140px}
+
+.dd-list { display: block; position: relative; margin: 0; padding:0; list-style: none;color: #fff;}
+
+.dd-item,
+.dd-empty,
+.dd-placeholder { display: block; position: relative; min-height: 20px; font-size: 16px;color: fff; line-height: 20px; margin: 10px; padding: 10px;  background: rgba(233, 92, 51, 1);border-radius: 4px}
+.chkBootstrap{float: right;display: inline-block;}
+
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+ol.dd-list li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ol.dd-list li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}

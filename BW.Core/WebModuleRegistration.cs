@@ -17,7 +17,7 @@ namespace BW.Core.Injection
             {
                 var mvc = AssemblyLoad.GetAllProjectAssemblies(Config.Controllers);
                 if (mvc != null)
-                    builder.RegisterControllers(mvc);
+                    builder.RegisterControllers(mvc).PropertiesAutowired();
             }
             builder.RegisterFilterProvider();
         }

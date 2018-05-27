@@ -167,15 +167,77 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BetWinController.cs" />
+    <Compile Include="Controllers\PageTempController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result\ExceptionResult.cs" />
     <Compile Include="Result\JsonNetResult.cs" />
+    <Compile Include="Result\TableResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bs3\bui-min.css" />
+    <Content Include="assets\css\bs3\bui.css" />
+    <Content Include="assets\css\bs3\dpl-min.css" />
+    <Content Include="assets\css\bs3\dpl.css" />
+    <Content Include="assets\css\bui-min.css" />
+    <Content Include="assets\css\build.xml" />
+    <Content Include="assets\css\diy.css" />
+    <Content Include="assets\css\dpl-min.css" />
+    <Content Include="assets\css\main-min.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\page-min.css" />
+    <Content Include="assets\css\page.css" />
+    <Content Include="assets\css\prettify.css" />
+    <Content Include="assets\img\calendar-200-300.gif" />
+    <Content Include="assets\img\chart.png" />
+    <Content Include="assets\img\checkbox.gif" />
+    <Content Include="assets\img\check_icon-100-100.gif" />
+    <Content Include="assets\img\hide_list.png" />
+    <Content Include="assets\img\icon-806-614.png" />
+    <Content Include="assets\img\left-slib.gif" />
+    <Content Include="assets\img\load-16-16.gif" />
+    <Content Include="assets\img\main-nav-bg.png" />
+    <Content Include="assets\img\main-nav-bg1.png" />
+    <Content Include="assets\img\menu-500-188.png" />
+    <Content Include="assets\img\menu.jpg" />
+    <Content Include="assets\img\nav.jpg" />
+    <Content Include="assets\img\nav_selected.png" />
+    <Content Include="assets\img\radio_icon-64-40.gif" />
+    <Content Include="assets\img\resource.jpg" />
+    <Content Include="assets\img\separator-2-340.gif" />
+    <Content Include="assets\img\sprite-469-300.png" />
+    <Content Include="assets\img\tab-140-120.gif" />
+    <Content Include="assets\img\table-191-450.gif" />
+    <Content Include="assets\img\tool-sprites.png" />
+    <Content Include="assets\img\tree.gif" />
+    <Content Include="assets\img\tree_icon-80-100.gif" />
+    <Content Include="assets\img\ui-img-view-height.jpg" />
+    <Content Include="assets\img\ui-img-view-height.png" />
+    <Content Include="assets\img\ui-img-view-width.jpg" />
+    <Content Include="assets\img\ui-img-view-width.png" />
+    <Content Include="assets\img\white_sprite-469-300.png" />
+    <Content Include="assets\js\bui-min.js" />
+    <Content Include="assets\js\bui.js" />
+    <Content Include="assets\js\chart-min.js" />
+    <Content Include="assets\js\common\main-min.js" />
+    <Content Include="assets\js\common\main.js" />
+    <Content Include="assets\js\common\page-min.js" />
+    <Content Include="assets\js\common\page.js" />
+    <Content Include="assets\js\common\search-min.js" />
+    <Content Include="assets\js\common\search.js" />
+    <Content Include="assets\js\config-min.js" />
+    <Content Include="assets\js\config.js" />
+    <Content Include="assets\js\extensions\treegrid-min.js" />
+    <Content Include="assets\js\extensions\treepicker-min.js" />
+    <Content Include="assets\js\graphic-min.js" />
+    <Content Include="assets\js\jquery-1.8.1.min.js" />
+    <Content Include="assets\js\jquery-sortable.js" />
+    <Content Include="assets\js\jquery.nestable.js" />
+    <Content Include="assets\js\prettify.js" />
+    <Content Include="assets\js\slider-min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -209,11 +271,11 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\BetWin\Main.cshtml" />
+    <Content Include="Views\PageTemp\AccountsBankInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +299,10 @@
     <ProjectReference Include="..\BW.Core\BW.Core.Injection.csproj">
       <Project>{751F8502-EFB5-479E-A138-67771EFF4E33}</Project>
       <Name>BW.Core.Injection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BW.DataSource\BW.DataSource.csproj">
+      <Project>{275C3C29-9CE3-4B29-B352-9DB046F58BD0}</Project>
+      <Name>BW.DataSource</Name>
     </ProjectReference>
     <ProjectReference Include="..\BW.Domain.Enitiy\BW.Enitiy.csproj">
       <Project>{2cf8bc3f-1513-4983-9871-5571e3078eda}</Project>
