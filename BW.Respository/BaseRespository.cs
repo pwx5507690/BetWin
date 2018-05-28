@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BW.Infrastructure;
+using BW.Enitiy;
 
 namespace BW.Respository
 {
@@ -17,12 +18,19 @@ namespace BW.Respository
     public abstract class BaseRespository<T> where T : ISQLDataEnity<T>
     {
         public string _defaultOrderBy;
+        private AccountsDataTotal sqlDataEnity;
         public readonly T _sqlDataEnity;
         public BaseRespository(T sqlDataEnity)
         {
             _defaultOrderBy = GetDefaultOrderBy();
             _sqlDataEnity = sqlDataEnity;
         }
+
+        protected BaseRespository(AccountsDataTotal sqlDataEnity)
+        {
+            this.sqlDataEnity = sqlDataEnity;
+        }
+
         public virtual int AddStr(string item)
         {
             var t = item.DeserializeObject<T>();

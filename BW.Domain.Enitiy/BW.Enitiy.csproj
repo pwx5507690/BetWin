@@ -46,6 +46,7 @@
     <Compile Include="AccountsCollection.cs" />
     <Compile Include="AccountsDataTotal.cs" />
     <Compile Include="AccountsFeedBack.cs" />
+    <Compile Include="AccountsIds.cs" />
     <Compile Include="AccountsInfo.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="AccountsBankInfo.cs" />
