@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AccountsBankInfoRespository.cs" />
     <Compile Include="AccountsCollectionRespository.cs" />
+    <Compile Include="AccountsDataTotalRespository.cs" />
     <Compile Include="AccountsInfoRespository.cs" />
     <Compile Include="BaseRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

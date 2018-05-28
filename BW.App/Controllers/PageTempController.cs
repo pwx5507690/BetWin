@@ -20,7 +20,7 @@ namespace BW.App.Controllers
       
         public object GetDyncProperty(string respository) {
             if (string.IsNullOrEmpty(respository))
-                throw new BWException("respository IsNullOrEmpty");
+                throw new BWException("respository is not found");
 
             respository = $"_{respository}Respository";
             return this.GetType().GetProperty(respository).GetValue(this);
