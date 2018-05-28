@@ -48,10 +48,36 @@
     <Compile Include="AccountsFeedBack.cs" />
     <Compile Include="AccountsIds.cs" />
     <Compile Include="AccountsInfo.cs" />
+    <Compile Include="AccountsInvitel.cs" />
+    <Compile Include="AccountsLogonLog.cs" />
+    <Compile Include="AccountsNameTe.cs" />
+    <Compile Include="AccountsNews.cs" />
+    <Compile Include="ActivityInfo.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="AccountsBankInfo.cs" />
+    <Compile Include="Bets.cs" />
+    <Compile Include="BetsCatchNumIssue.cs" />
+    <Compile Include="BetsOrderInfo.cs" />
+    <Compile Include="ChangeCoinInfo.cs" />
+    <Compile Include="CommInfo.cs" />
+    <Compile Include="DataComm.cs" />
+    <Compile Include="DataTeamReport.cs" />
+    <Compile Include="lotteryPlayTypeNums.cs" />
+    <Compile Include="LotteryPlayTypeRadios.cs" />
+    <Compile Include="lotteryPlayTypes.cs" />
+    <Compile Include="LotteryTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatherInfo.cs" />
+    <Compile Include="SignLogs.cs" />
+    <Compile Include="SystemBankGroup.cs" />
     <Compile Include="SystemBankType.cs" />
+    <Compile Include="SystemCashConfig.cs" />
+    <Compile Include="SystemConfig.cs" />
+    <Compile Include="SystemLayer.cs" />
+    <Compile Include="SystemNews.cs" />
+    <Compile Include="SystemPayInfo.cs" />
+    <Compile Include="SystemPayType.cs" />
+    <Compile Include="WinCoinTop50.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BW.DataSource\BW.DataSource.csproj">

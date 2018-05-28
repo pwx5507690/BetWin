@@ -1,0 +1,46 @@
+﻿using BW.DataSource;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace BW.Enitiy
+{
+    public class DataTeamReport : Base<DataTeamReport>
+    {
+        [JsonProperty(PropertyName = "userid")]
+        [Column("UserID", DbType.Int32)]
+        public int UserID { get; set; }
+
+        [JsonProperty(PropertyName = "accounts")]
+        [Column("Accounts", DbType.String)]
+        public string Accounts { get; set; }
+
+        [JsonProperty(PropertyName = "betcoin")]
+        [Column("BetCoin", DbType.Decimal)]
+        public decimal BetCoin { get; set; }
+
+        [JsonProperty(PropertyName = "wincoin")]
+        [Column("WinCoin", DbType.Decimal)]
+        public decimal WinCoin { get; set; }
+
+        [JsonProperty(PropertyName = "commcoin")]
+        [Column("CommCoin", DbType.Decimal)]
+        public decimal CommCoin { get; set; }
+
+        [JsonProperty(PropertyName = "paycoin")]
+        [Column("PayCoin", DbType.Decimal)]
+        public decimal PayCoin { get; set; }
+
+        [JsonProperty(PropertyName = "drawcoin")]
+        [Column("DrawCoin", DbType.Decimal)]
+        public decimal DrawCoin { get; set; }
+
+        [JsonProperty(PropertyName = "add_date")]
+        [Column("Add_Date", DbType.DateTime)]
+        public DateTime Add_Date { get; set; }
+
+    }
+}
