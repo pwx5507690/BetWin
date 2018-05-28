@@ -4,23 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace BW.Respository
 {
-    public class AccountsIdsRespository : BaseRespository<AccountsIds>
+    public class SignLogsRespository : BaseRespository<SignLogs>
     {
-        public AccountsIdsRespository(AccountsIds sqlDataEnity) : base(sqlDataEnity)
+        public SignLogsRespository(SignLogs sqlDataEnity) : base(sqlDataEnity)
         {
-
         }
+
         public override string GetDefaultOrderBy()
         {
             return "order by ID desc";
         }
 
-        public override void SetItemView(AccountsIds item, OptionType type)
+        public override void SetItemView(SignLogs item, OptionType type)
         {
-            
+
         }
     }
 }

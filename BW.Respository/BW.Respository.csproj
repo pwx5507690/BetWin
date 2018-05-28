@@ -46,9 +46,35 @@
     <Compile Include="AccountsFeedBackRespository.cs" />
     <Compile Include="AccountsIdsRespository.cs" />
     <Compile Include="AccountsInfoRespository.cs" />
+    <Compile Include="AccountsInvitelRespository.cs" />
+    <Compile Include="AccountsLogonLogRespository.cs" />
+    <Compile Include="AccountsNameTeRespository.cs" />
+    <Compile Include="AccountsNewsRespository.cs" />
+    <Compile Include="ActivityInfoRespository.cs" />
     <Compile Include="BaseRespository.cs" />
+    <Compile Include="BetsCatchNumIssueRespository.cs" />
+    <Compile Include="BetsOrderInfoRespository.cs" />
+    <Compile Include="BetsRespository.cs" />
+    <Compile Include="ChangeCoinInfoRespository.cs" />
+    <Compile Include="CommInfoRespository.cs" />
+    <Compile Include="DataCommRespository.cs" />
+    <Compile Include="DataTeamReportRespository.cs" />
+    <Compile Include="lotteryPlayTypeNumsRespository.cs" />
+    <Compile Include="LotteryPlayTypeRadiosRespository.cs" />
+    <Compile Include="lotteryPlayTypesRespository.cs" />
+    <Compile Include="LotteryTypesRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatherInfoRespository.cs" />
+    <Compile Include="SignLogsRespository.cs" />
+    <Compile Include="SystemBankGroupRespository.cs" />
     <Compile Include="SystemBankTypeRespository.cs" />
+    <Compile Include="SystemCashConfigRespository.cs" />
+    <Compile Include="SystemConfigRespository.cs" />
+    <Compile Include="SystemLayerRespository.cs" />
+    <Compile Include="SystemNewsRespository.cs" />
+    <Compile Include="SystemPayInfoRespository.cs" />
+    <Compile Include="SystemPayTypeRespository.cs" />
+    <Compile Include="WinCoinTop50Respository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BW.DataSource\BW.DataSource.csproj">

@@ -41,6 +41,5 @@ namespace BW.Enitiy
         [JsonProperty(PropertyName = "add_date")]
         [Column("Add_Date", DbType.DateTime)]
         public DateTime Add_Date { get; set; }
-
     }
 }
