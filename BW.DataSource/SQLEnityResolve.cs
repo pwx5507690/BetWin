@@ -62,6 +62,8 @@ namespace BW.DataSource
                 return System.Convert.ToSingle(value);
             else if (columnAttribute.Type == DbType.Boolean)
                 return System.Convert.ToBoolean(value);
+            else if (columnAttribute.Type == DbType.Decimal)
+                return System.Convert.ToDecimal(value);
             return value.ToString();
         }
         public IEnumerable<T> Convert<T>(object obj, DataTable data)

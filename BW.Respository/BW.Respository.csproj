@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountsBankInfoRespository.cs" />
-    <Compile Include="AccountsCollection.cs" />
+    <Compile Include="AccountsCollectionRespository.cs" />
+    <Compile Include="AccountsInfoRespository.cs" />
     <Compile Include="BaseRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemBankTypeRespository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BW.DataSource\BW.DataSource.csproj">

@@ -48,6 +48,7 @@
     <Compile Include="Base.cs" />
     <Compile Include="AccountsBankInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemBankType.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BW.DataSource\BW.DataSource.csproj">

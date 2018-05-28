@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace BW.Enitiy
 {
-    public abstract class Base<T> : SQLDataEnity<T>
+    public class Base<T> : SQLDataEnity<T>
 	{
 		public Base() : base("Connection")
 		{

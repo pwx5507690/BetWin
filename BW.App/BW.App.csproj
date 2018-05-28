@@ -172,6 +172,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\OptionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result\ExceptionResult.cs" />
     <Compile Include="Result\JsonNetResult.cs" />
@@ -222,6 +223,7 @@
     <Content Include="assets\js\bui-min.js" />
     <Content Include="assets\js\bui.js" />
     <Content Include="assets\js\chart-min.js" />
+    <Content Include="assets\js\common\common.js" />
     <Content Include="assets\js\common\main-min.js" />
     <Content Include="assets\js\common\main.js" />
     <Content Include="assets\js\common\page-min.js" />
@@ -238,6 +240,7 @@
     <Content Include="assets\js\jquery.nestable.js" />
     <Content Include="assets\js\prettify.js" />
     <Content Include="assets\js\slider-min.js" />
+    <Content Include="assets\js\underscore.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -279,7 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

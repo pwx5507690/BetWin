@@ -14,7 +14,7 @@ namespace BW.App.Result
         }
         public TableResult(Table table)
         {
-            this.Data = table;
+             Data = table;
         }
     }
 }

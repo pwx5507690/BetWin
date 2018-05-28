@@ -33,7 +33,7 @@ namespace BW.Enitiy
         [Column("BankUserName", DbType.String)]
         public string BankUserName { get; set; }
         [JsonProperty(PropertyName = "addDate")]
-        [Column("Add_Date", DbType.String)]
-        public string Add_Date { get; set; }
+        [Column("Add_Date", DbType.DateTime)]
+        public DateTime Add_Date { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace BW.App
         {
             bundles.Add(new ScriptBundle("~/betWin/bootstrap").Include(
                       "~/assets/js/jquery-1.8.1.min.js",
+                      "~/assets/js/underscore.js",
                       "~/assets/js/bui.js",
                       "~/assets/js/config.js"));
 
