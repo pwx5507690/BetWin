@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BW.Infrastructure
 {
-   public static class ExtendString
+    public static class ExtendString
     {
         public static bool IsNotNullOrEmpty(this string value)
         {
@@ -74,6 +74,16 @@ namespace BW.Infrastructure
         public static string TrimSpace(this string convertString)
         {
             return convertString.Replace(" ", "");
+        }
+        public static string GetRemovePrefixString(this string str, string val)
+        {
+            string strRegex = @"^(" + str + ")";
+            return Regex.Replace(val, strRegex, "");
+        }
+        public static string GetRemoveSuffixString(this string str, string val)
+        {
+            string strRegex = @"(" + str + ")" + "$";
+            return Regex.Replace(val, strRegex, "");
         }
         public static string UpperFirst(this string convertString)
         {

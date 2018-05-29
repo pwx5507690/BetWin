@@ -9,15 +9,15 @@ namespace BW.App
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/betWin/bootstrap").Include(
-                      "~/assets/js/jquery-1.8.1.min.js",
-                      "~/assets/js/underscore.js",
-                      "~/assets/js/bui.js",
-                      "~/assets/js/config.js"));
+                      "~/Assets/Js/jquery-1.8.1.min.js",
+                      "~/Assets/Js/underscore.js",
+                      "~/Assets/Js/bui.js",
+                      "~/Assets/Js/config.js"));
 
             bundles.Add(new StyleBundle("~/betWin/css").Include(
-                      "~/assets/css/dpl-min.css",
-                      "~/assets/css/bui-min.css",
-                      "~/assets/css/main-min.css"));
+                      "~/Assets/Css/dpl-min.css",
+                      "~/Assets/Css/bui-min.css",
+                      "~/Assets/Css/main-min.css"));
         }
     }
 }

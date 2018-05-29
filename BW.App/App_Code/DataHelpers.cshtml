@@ -1,0 +1,27 @@
+﻿@using Autofac
+@using BW.Respository
+@helper  GenerateAccount()
+{
+var accountsInfoRespository = BW.Core.Injection.IoC.Container.Resolve<AccountsInfoRespository>();
+var result = accountsInfoRespository.QueryAll();
+    <select id="accountsInfo">
+        <option value="-1">请选择</option>
+        @foreach (var item in result)
+        {
+            <option value="@item.UserID">@item.NickName</option>
+        }
+    </select>
+}
+
+@helper  GenerateBlankType()
+{
+var systemBankTypeRespository = BW.Core.Injection.IoC.Container.Resolve<SystemBankTypeRespository>();
+var result = systemBankTypeRespository.QueryAll();
+    <select id="bankType">
+        <option value="-1">请选择</option>
+        @foreach (var item in result)
+        {
+        <option value="@item.BankCode">@item.BankName</option>
+        }
+    </select>
+}

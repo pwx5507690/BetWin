@@ -5,6 +5,7 @@ using System.Web.Mvc;
 
 namespace BW.App
 {
+    
     public class CustomErrorAttribute : HandleErrorAttribute
     {
         public override void OnException(ExceptionContext filterContext)

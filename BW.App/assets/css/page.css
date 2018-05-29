@@ -9,5 +9,8 @@
 .detail-page,.form-page,.search-page{
 	padding:0;
 }
+.bui-stdmod-body {
+    background-color: #f5f5f5 !important;
+}
 
 

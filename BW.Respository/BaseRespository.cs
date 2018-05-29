@@ -25,12 +25,10 @@ namespace BW.Respository
             _defaultOrderBy = GetDefaultOrderBy();
             _sqlDataEnity = sqlDataEnity;
         }
-
         protected BaseRespository(AccountsDataTotal sqlDataEnity)
         {
             this.sqlDataEnity = sqlDataEnity;
         }
-
         public virtual int AddStr(string item)
         {
             var t = item.DeserializeObject<T>();
@@ -56,12 +54,23 @@ namespace BW.Respository
         }
         public virtual int Delete(T item)
         {
-            _sqlDataEnity.Add(item);
+            _sqlDataEnity.Delete(item);
             return 1;
         }
         public virtual int Update(T item)
         {
-            return _sqlDataEnity.Add(item);
+            return _sqlDataEnity.Update(item);
+        }
+        public bool QueryExist(string expression)
+        {
+            return QueryExpression(expression).Any();
+        }
+        public IEnumerable<T> QueryExpression(string expression)
+        {
+            var condition = new SQLCondition();
+            _defaultOrderBy = _defaultOrderBy ?? "";
+            condition.Expression = $"where {expression} {_defaultOrderBy}";
+            return _sqlDataEnity.Query(condition: condition);
         }
         public IEnumerable<T> QueryAll()
         {

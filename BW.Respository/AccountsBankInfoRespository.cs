@@ -23,7 +23,7 @@ namespace BW.Respository
         public override void SetItemView(AccountsBankInfo item, OptionType type)
         {
             if (type == OptionType.Add)
-                item.Add_Date = DateTime.UtcNow;
+                item.Add_Date = DateTime.Now;
         }
     }
 }

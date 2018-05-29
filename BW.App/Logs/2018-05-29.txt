@@ -1,0 +1,16 @@
+2018-05-29 12:11:00,241 [29] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:36:29,937 [56] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:36:34,886 [49] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:38:38,368 [45] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:40:39,310 [50] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:40:55,861 [67] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:41:12,123 [63] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:41:19,358 [45] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:41:28,229 [68] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 12:41:32,587 [59] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 14:54:18,444 [87] ERROR - 未将对象引用设置到对象的实例。BW.App.Controllers.PageTempController
+2018-05-29 15:00:33,028 [10] ERROR - 未将对象引用设置到对象的实例。BW.App.Controllers.PageTempController
+2018-05-29 15:00:33,028 [8] ERROR - 未将对象引用设置到对象的实例。BW.App.Controllers.PageTempController
+2018-05-29 15:01:43,802 [8] ERROR - 调用的目标发生了异常。BW.App.Controllers.PageTempController
+2018-05-29 15:03:04,592 [8] ERROR - Unexpected character encountered while parsing value: a. Path '', line 0, position 0.BW.App.Controllers.PageTempController
+2018-05-29 15:45:34,797 [8] ERROR - 已成功与服务器建立连接，但是在登录前的握手期间发生错误。 (provider: Shared Memory Provider, error: 0 - 管道的另一端上无任何进程。)BW.App.Controllers.PageTempController
